@@ -6,9 +6,9 @@ RSpec.describe Post, type: :model do
      association = described_class.reflect_on_association(:user).macro
      expect(association).to eq :belongs_to
    end
-   if 'belongs_to category' do
+   it 'belongs_to category' do
      association = described_class.reflect_on_association(:category).macro
-     expect(association).t eq :belongs_to
+     expect(association).to eq :belongs_to
    end
   end
 end
