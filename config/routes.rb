@@ -11,6 +11,15 @@ Rails.application.routes.draw do
     get 'signup', to: 'devise/registrations#new'
   end
 
+  resources :posts do
+    collection do
+      get 'hobby'
+      get 'study'
+      get 'team'
+    end
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
